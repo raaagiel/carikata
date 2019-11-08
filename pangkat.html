@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pangkat</title>
+</head>
+
+<body>
+    <h1>Pangkatkan</h1> <br>
+    Masukan Angka: <input id='nilai' type="number" placeholder="masukan angka">
+    <br><br>
+    Pangkat: <input id='pangkatnya' type="number" placeholder="masukan angka">
+    <br><br>
+    <button id="klik" onclick="pangkat()">kuadratkan</button>
+    <h1></h1>
+</body>
+<script>
+    const pangkat = () => {
+        var angka = document.getElementById('nilai').value
+        var pangkat = document.getElementById('pangkatnya').value
+        var hitung = Math.pow(angka, pangkat)
+
+        document.getElementsByTagName('h1')[1].innerHTML = `Jumlah pangkat dari ${angka} adalah: ${hitung}`
+    }
+</script>
+
+</html>
