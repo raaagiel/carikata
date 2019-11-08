@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cari Kata</title>
+</head>
+
+<body>
+    <h1>Cari Kata</h1> <br>
+    Masukan kalimat: <input id='kata' type="text" placeholder="masukan kalimat">
+    <br><br>
+    Huruf yang dicari: <input id='karakter' type="text" placeholder="masukan huruf">
+    <br><br>
+    <button id="klik" onclick="carikata()">klik Disini</button>
+    <h1></h1>
+</body>
+<style>
+    html {
+        background-color: blueviolet
+    }
+
+    ;
+</style>
+<script>
+    function carikata() {
+        var kalimat = document.getElementById('kata').value
+        // console.log(kalimat)
+        var huruf = document.getElementById('karakter').value
+        // console.log(huruf)
+        var hitung = 0
+        for (var i = 0; i < kalimat.length; i++) {
+            if (kalimat[i] == huruf) {
+                hitung++
+            }
+        }
+        // return hitung
+        document.getElementsByTagName('h1')[1].innerHTML = `jumlah huruf yang dicari: ${hitung}`
+
+    }
+</script>
+
+</html>
